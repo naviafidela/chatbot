@@ -2,8 +2,8 @@ from pyrogram import Client
 import time
 
 # Masukkan detail API Anda
-api_id = 123456  # Ganti dengan API ID Anda
-api_hash = "abcdef1234567890abcdef1234567890"  # Ganti dengan API HASH Anda
+api_id = 24398104  # Ganti dengan API ID Anda
+api_hash = "bf3dd3903b975768581bccd27721441f"  # Ganti dengan API HASH Anda
 
 # Buat instance Pyrogram Client
 app = Client("my_userbot", api_id=api_id, api_hash=api_hash)
