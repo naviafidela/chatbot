@@ -16,15 +16,24 @@ def userbot():
 
         while True:
             try:
-                # Kirim pesan ke @chatbot
+                # Kirim pesan teks ke @chatbot
                 app.send_message("@chatbot", "Halo, ini pesan otomatis dari userbot!")
-                print("Pesan terkirim ke @chatbot")
+                print("Pesan teks terkirim ke @chatbot")
                 time.sleep(3)  # Tunggu 3 detik
+
+                # Kirim gambar dari URL ke @chatbot
+                app.send_photo(
+                    "@chatbot",
+                    photo="https://example.com/path-to-your-image.jpg",  # Ganti dengan URL gambar Anda
+                    caption="Ini adalah gambar otomatis dari URL!"
+                )
+                print("Gambar dari URL terkirim ke @chatbot")
+                time.sleep(5)  # Tunggu 5 detik
 
                 # Kirim perintah /next
                 app.send_message("@chatbot", "/next")
                 print("Perintah /next terkirim")
-                time.sleep(5)  # Tunggu 5 detik sebelum mengirim pesan lagi
+                time.sleep(3)  # Tunggu 3 detik sebelum mengirim pesan berikutnya
             except Exception as e:
                 print(f"Error: {e}")
                 time.sleep(10)  # Tunggu sebelum mencoba ulang jika terjadi error
